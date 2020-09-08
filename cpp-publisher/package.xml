@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package format="2">
+	<name>cpp_publisher</name>
+	<version>0.0.0</version>
+	<description>Example package for practicing ROS, docker, and cpp/python</description>
+	<maintainer email="pi@todo.todo">pi</maintainer>
+	<license>GPLv3</license>
+
+	<buildtool_depend>catkin</buildtool_depend>
+
+	<!-- This is the place where all our tools get imported -->
+	<depend>roscpp</depend>
+
+	<export></export>
+</package>
