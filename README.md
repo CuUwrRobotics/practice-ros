@@ -231,7 +231,7 @@ mv cpp-publisher $final_package_directory/cpp-publisher
 
 ## Challenge 2
 
-The command to run the Python executable is `rosrun rosrun py_subscriber main.py`
+The command to run the Python executable is `rosrun py_subscriber main.py`
 
 ## Challenge 3
 
