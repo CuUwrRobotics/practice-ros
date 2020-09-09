@@ -18,7 +18,7 @@ int main(int argc, char **argv)
    * You must call one of the versions of ros::init() before using any other
    * part of the ROS system.
    */
-  ros::init(argc, argv, "cpp-talker");
+  ros::init(argc, argv, "cpp_talker");
 
   /**
    * NodeHandle is the main access point to communications with the ROS system.
@@ -57,7 +57,7 @@ int main(int argc, char **argv)
   while (ros::ok())
   {
     /**
-     * This is a message object. You stuff it with data, and then publish it.
+     * This is a ROS-specific message object. You stuff it with data, and then publish it.
      */
 
     std_msgs::String msg;
@@ -76,10 +76,10 @@ int main(int argc, char **argv)
      */
     chatter_pub.publish(msg);
 
-    ros::spinOnce();
+    ros::spinOnce(); // Send the published data over the /chatter channel
 
     loop_rate.sleep();
-    ++count;
+    count++;
   }
 
   return 0;
