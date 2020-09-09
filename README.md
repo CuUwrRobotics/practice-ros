@@ -36,7 +36,7 @@ If you're on Windows, you'll want to use PowerShell, rather than Command Prompt.
 
 Look at the directory structure. This is important for how files will get moved around. Type `tree` from within the cloned repository.
 
-This is what it should look like, with some things ommitted:
+This is what it should look like, with some things omitted:
 
 ```*
 U:\PRACTICE-ROS
@@ -113,7 +113,7 @@ _After detaching, you can enter the container using the command `docker exec -it
 
 -   This will execute (`exec`) the command `bash` in the `piranhabot_container` (it was named by the `Makefile` automatically), using interactive mode (`-it`). In other words, it will start a bash session in the container. (Note that you can technically use any command instead of `bash`, like `ls`, `nano`, or others, including local executables.)
 
-You should now be in the container. Your pompt will have changed from the windws `>` to a linux prompt (in this case, `#`, since you are running as root)
+You should now be in the container. Your prompt will have changed from the windows `>` to a Linux prompt (in this case, `#`, since you are running as root)
 
 You can look around, and you will find that you are in a barebones Ubuntu system. Type `neofetch` for a fancy display of your system, as the container sees it.
 
@@ -188,11 +188,11 @@ Time to run the programs! We'll start with the Python code. Remember, this is th
 
 All programs are run using `rosrun`. The format of the command is `rosrun [project_name] [node_name] <args>`. Project name is the name defined in `CMakeLists.txt`, not by the folder name. `node_name` is either the Python program or the node name given for a C++ executable in `CMakeLists.txt`. `args` are the arguments to pass to the program, but we won't need those now.
 
-_Challenge 2: In a fourth bash session, use `rosrun` to run the python program. (Answers are still at bottom, but try to figure this out!)_
+_Challenge 2: In a fourth bash session, use `rosrun` to run the python program. Use the project name defined in the Python project's `CMakeLists.txt`. (Answers are still at bottom, but try to figure this out!)_
 
 Refresh the rqt_graph from the GUI using the button in the top left. You should see `/py_listener`. Since it is a node (an instance of the program), it is a circle.
 
-_Challenge 3: In a fifth bash session, use `rosrun` to run the C+= program._
+_Challenge 3: In a fifth bash session, use `rosrun` to run the C++ program._
 
 Look at the output of both the C++ program and the Python program. They should match! This means you've just gotten two programs to talk using ROS!
 
@@ -212,7 +212,9 @@ Go back to your first bash session. Type `rostopic`. There are a few things wort
 -   `hz <topic>`
 -   `info <topic>` basically what rqt_graph shows (but more boring)
 
-Note that there are a LOT of ROS commands; type `ros` then hit `tab` twice to see a full list.
+Note that there are a LOT of ROS commands; type `ros` then hit `tab` twice to see a full list. The same goes for `rqt`.
+
+One last interesting command is `rqt_bag`. There's too much here to go over, since we likely won't use this much. It opens a GUI which will allow you to use ROS bagfiles, which store the state of the session recorded. You can later take the recorded file and play it back. If you recorded the output of the C++ publisher, then closed it, then played it back, with the Python subscriber running, the subscriber will write out the same data as it would if the C++ file were running.
 
 # Challenges
 

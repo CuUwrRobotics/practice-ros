@@ -23,6 +23,8 @@ def listener():
     # callback called when it happens.
     rospy.Subscriber("chatter", String, callback)
 
+    print('Waiting for messages...')
+
     # spin() simply keeps python from exiting until this node is stopped manually
     # This will loop infinitely. You can also use spinOnce() to only run once,
     # in case you need other code running
