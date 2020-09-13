@@ -85,7 +85,7 @@ The program, when run, will publish messages to the `/chatter` topic.
 
 The Python code is the listener, also called a _subscriber_.
 
-The program, when run, will read messages published to the `/chatter` topic and print them out. It does this will a _callback_ function, which will be called any time new information is posted to `/chatter`.
+The program, when run, will read messages published to the `/chatter` topic and print them out. It does this with a _callback_ function, which will be called any time new information is posted to `/chatter`.
 
 ## Docker
 
