@@ -1,4 +1,10 @@
 #!/usr/bin/env python
+
+# @Author: Nick Steele <nichlock>
+# @Date:   15:24 Sep 08 2020
+# @Last modified by:   nichlock
+# @Last modified time: 19:12 Sep 19 2020
+
 import rospy
 from std_msgs.msg import String
 

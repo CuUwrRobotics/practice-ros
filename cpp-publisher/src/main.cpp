@@ -1,3 +1,10 @@
+/**
+ * @Author: Nick Steele <nichlock>
+ * @Date:   15:24 Sep 08 2020
+ * @Last modified by:   nichlock
+ * @Last modified time: 19:13 Sep 19 2020
+ */
+
 #include "ros/ros.h"
 #include "std_msgs/String.h"
 

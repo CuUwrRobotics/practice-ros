@@ -1,3 +1,10 @@
+<!--
+@Author: Nick Steele <nichlock>
+@Date:   15:42 Sep 08 2020
+@Last modified by:   nichlock
+@Last modified time: 19:11 Sep 19 2020
+-->
+
 <?xml version="1.0"?>
 <package format="2">
 	<name>py_subscriber</name>
